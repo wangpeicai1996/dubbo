@@ -1,0 +1,20 @@
+package com.even.provider.service;
+
+import com.even.Dto.URL;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class LocalRegister {
+
+    private static Map<String,Class> map = new HashMap<String,Class>();
+
+
+    public void register(String interfaceName, Class implClass){
+        map.put(interfaceName, implClass);
+    }
+
+    public static Class get(String interfaceName){
+        return map.get(interfaceName);
+    }
+}
