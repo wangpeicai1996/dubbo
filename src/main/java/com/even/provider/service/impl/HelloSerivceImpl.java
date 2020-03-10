@@ -6,6 +6,6 @@ public class HelloSerivceImpl implements HelloService {
     @Override
     public String sayHello(String username) {
         System.out.println("服务方调用===" + username);
-        return "调用成功";
+        return "1111";
     }
 }
