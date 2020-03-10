@@ -1,11 +1,9 @@
 package com.even.provider.service;
 
 import com.even.Dto.URL;
+import com.even.protocol.TomcatService;
 import com.even.provider.service.impl.HelloSerivceImpl;
 import com.even.register.RegisterCenter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class Provider {
@@ -21,6 +19,7 @@ public class Provider {
         registerCenter.register(HelloService.class.getName(), url);
 
         //3.tomcat，将服务提供方服务在服务容器中运行
-
+        TomcatService service = new TomcatService();
+        service.start("localhost",8080);
     }
 }
