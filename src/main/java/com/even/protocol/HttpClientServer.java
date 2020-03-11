@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class HttpClientServer {
+public class HttpClientServer implements ProtocolIntrface{
 
 
     public String send(String host, int port, Invocation invocation) throws URISyntaxException {
